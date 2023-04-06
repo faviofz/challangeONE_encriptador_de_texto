@@ -8,10 +8,16 @@
         <title>Encriptador de texto</title>
     </head>
     <body>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese aqui el texto a encriptar"></textarea>
-        <input type="text" name="" id="" />
-        <button></button>
-        <button></button>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea
+            name=""
+            id="inputText"
+            cols="30"
+            rows="10"
+            placeholder="Ingrese aqui el texto a encriptar"
+        ></textarea>
+        <button onclick="handleEncrypt()">Encriptar</button>
+        <button onclick="handleDecrypt()">Desencriptar</button>
+        <textarea name="" id="outputText" cols="30" rows="10"></textarea>
+        <script src="functions.js"></script>
     </body>
 </html>
