@@ -1,13 +1,31 @@
 function handleEncrypt() {
     let inputText = document.getElementById("inputText").value
+    if (inputText === null || inputText === "") {
+        document.getElementById("messageNotFound").style.display = "block"
+        document.getElementById("outputText").style.display = "none";
+        return
+    }
 
-    document.getElementById("outputText").value = encrypt(inputText);
+    let para = document.getElementById("outputText")
+    para.textContent = encrypt(inputText);
+
+    document.getElementById("messageNotFound").style.display = "none"
+    para.style.display = "block";
 }
 
 function handleDecrypt() {
     let inputText = document.getElementById("inputText").value
+    if (inputText === null || inputText === "") {
+        document.getElementById("messageNotFound").style.display = "block"
+        document.getElementById("outputText").style.display = "none";
+        return
+    }
 
-    document.getElementById("outputText").value = decrypt(inputText);
+    let para = document.getElementById("outputText")
+    para.textContent = decrypt(inputText);
+
+    document.getElementById("messageNotFound").style.display = "none"
+    para.style.display = "block";
 }
 
 function encrypt(inputText) {
