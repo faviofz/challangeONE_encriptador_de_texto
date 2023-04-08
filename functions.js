@@ -1,31 +1,31 @@
 function handleEncrypt() {
     let inputText = document.getElementById("inputText").value
     if (inputText === null || inputText === "") {
-        document.getElementById("messageNotFound").style.display = "block"
-        document.getElementById("outputText").style.display = "none";
+        document.getElementById("messageNotFound").style.display = "block";
+        document.getElementById("outputContainer").style.display = "none";
         return
     }
 
     let para = document.getElementById("outputText")
     para.textContent = encrypt(inputText);
 
-    document.getElementById("messageNotFound").style.display = "none"
-    para.style.display = "block";
+    document.getElementById("messageNotFound").style.display = "none";
+    document.getElementById("outputContainer").style.display = "block";
 }
 
 function handleDecrypt() {
     let inputText = document.getElementById("inputText").value
     if (inputText === null || inputText === "") {
-        document.getElementById("messageNotFound").style.display = "block"
-        document.getElementById("outputText").style.display = "none";
+        document.getElementById("messageNotFound").style.display = "block";
+        document.getElementById("outputContainer").style.display = "none";
         return
     }
 
     let para = document.getElementById("outputText")
     para.textContent = decrypt(inputText);
 
-    document.getElementById("messageNotFound").style.display = "none"
-    para.style.display = "block";
+    document.getElementById("messageNotFound").style.display = "none";
+    document.getElementById("outputContainer").style.display = "block";
 }
 
 function encrypt(inputText) {

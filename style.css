@@ -1,3 +1,17 @@
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    float: left;
+    width: 100%;
+    min-height: 375px;
+    outline: none;
+    resize: none;
+    border: 0px;
+    background-color: transparent;
+}
+
 body {
     /* Encriptador - 1 Celular */
 
@@ -326,6 +340,102 @@ body {
     flex: none;
     order: 0;
     align-self: stretch;
+    flex-grow: 0;
+}
+
+#copyButton {
+    /* Button */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    width: 279px;
+    height: 67px;
+
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    background-color: white;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#copyButton p {
+    /* Button */
+
+    width: 231px;
+    height: 19px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* Dark blue/dark-blue-300 */
+
+    color: #0a3871;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+#advice {
+    /* Frame 1 */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 229px;
+    height: 18px;
+    left: 16px;
+    top: 451px;
+}
+
+#adviceText {
+    /* Solo letras minúsculas y sin acentos */
+
+    width: 205px;
+    height: 18px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* identical to box height, or 18px */
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
     flex-grow: 0;
 }
 
