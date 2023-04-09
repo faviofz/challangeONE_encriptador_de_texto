@@ -8,17 +8,16 @@
 body {
     min-height: 100vh;
     background: #f3f5fc;
-    margin: 0 15px 0 15px;
+    margin: 15px 15px 0 15px;
 }
 
-#header {
-    margin-top: 15px;
-}
-
-#alurasvg {
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 #inputText {
+    display: flex;
     width: 100%;
     min-height: 375px;
     outline: none;
@@ -131,7 +130,8 @@ body {
     width: 343px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 32px;
     margin: 15px auto;
     gap: 32px;
@@ -181,7 +181,7 @@ body {
 #outputText {
     display: none;
     width: 279px;
-    height: auto;
+    max-height: 400px;
 
     font-family: "Inter";
     font-style: normal;
@@ -189,12 +189,16 @@ body {
     font-size: 24px;
     line-height: 150%;
     color: #495057;
+
+    word-break: break-all;
+    overflow: auto;
 }
 
 #copyButton {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 24px;
     gap: 8px;
 
@@ -227,13 +231,80 @@ body {
     color: #0a3871;
 }
 
+#imageContainer img {
+    display: none;
+}
+
 @media screen and (min-width: 576px) {
+    #buttonsContainer {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    #messageContainer {
+        width: 100%;
+    }
+
+    #messageNotFound {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #messageNotFound p {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    #buttonsContainer {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+
+    #messageContainer {
+        width: 700px;
+    }
+
+    #messageNotFound {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #messageNotFound p {
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 992px) {
+    body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 45px;
+        padding: 20px 0;
+    }
+
+    #messageContainer {
+        margin-left: 50px;
+        align-self: stretch;
+    }
+
+    #outputContainer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #imageContainer img {
+        display: block;
+    }
 }
 
 @media screen and (min-width: 1200px) {

@@ -2,6 +2,7 @@ function handleEncrypt() {
     let inputText = document.getElementById("inputText").value
     if (inputText === null || inputText === "") {
         document.getElementById("messageNotFound").style.display = "block";
+        document.getElementById("imageContainer").style.display = "block";
         document.getElementById("outputContainer").style.display = "none";
         return
     }
@@ -10,7 +11,8 @@ function handleEncrypt() {
     para.textContent = encrypt(inputText);
 
     document.getElementById("messageNotFound").style.display = "none";
-    document.getElementById("outputContainer").style.display = "block";
+    document.getElementById("imageContainer").style.display = "none";
+    document.getElementById("outputContainer").style.display = "flex";
 }
 
 function handleDecrypt() {
@@ -25,7 +27,8 @@ function handleDecrypt() {
     para.textContent = decrypt(inputText);
 
     document.getElementById("messageNotFound").style.display = "none";
-    document.getElementById("outputContainer").style.display = "block";
+    document.getElementById("imageContainer").style.display = "none";
+    document.getElementById("outputContainer").style.display = "flex";
 }
 
 function encrypt(inputText) {
