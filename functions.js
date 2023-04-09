@@ -49,9 +49,15 @@ function replaceLetter(letter) {
 }
 
 function decrypt(inputText) {
-    return String(inputText).replace(/ai/g, "a")
+    return String(inputText)
+        .replace(/ai/g, "a")
         .replace(/enter/g, "e")
         .replace(/imes/g, "i")
         .replace(/ober/g, "o")
         .replace(/ufat/u, "u");
+}
+
+function copyToClipboard() {
+    let text = document.getElementById("outputText").textContent;
+    navigator.clipboard.writeText(text);
 }
